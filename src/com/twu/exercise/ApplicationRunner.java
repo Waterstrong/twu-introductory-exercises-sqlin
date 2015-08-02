@@ -20,6 +20,11 @@ public class ApplicationRunner {
         printSplitLine();
 
         triangleDiamond.drawCenteredDiamondWithName(3, "Bill");
+        printSplitLine();
+
+        FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+        fizzBuzzGame.fizzBuzz(1, 15);
+        
 
         printSplitLine();
     }
