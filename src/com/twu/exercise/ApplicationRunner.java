@@ -1,6 +1,8 @@
 package com.twu.exercise;
 
 
+import java.util.List;
+
 public class ApplicationRunner {
     public static void main(String[] args) {
         TriangleDiamond triangleDiamond = new TriangleDiamond();
@@ -24,9 +26,21 @@ public class ApplicationRunner {
 
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         fizzBuzzGame.fizzBuzz(1, 15);
-        
+        printSplitLine();
+
+        PrimeFactor primeFactor = new PrimeFactor();
+        List<Integer> primeFactors = primeFactor.generate(30);
+        printIntegerList(primeFactors);
+
 
         printSplitLine();
+    }
+
+    private static void printIntegerList(List<Integer> primeFactors) {
+        for (Integer pf : primeFactors) {
+            System.out.print(pf + " ");
+        }
+        System.out.println();
     }
 
     private static void printSplitLine() {
