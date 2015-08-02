@@ -1,19 +1,27 @@
 package com.twu.exercise;
 
-import com.twu.exercise.triangle.TriangleExercise;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
-        TriangleExercise triangle = new TriangleExercise();
-        triangle.drawAsterisk();
+        TriangleDiamond triangleDiamond = new TriangleDiamond();
+        triangleDiamond.drawAsterisk();
         printSplitLine();
-        triangle.drawHorizontalLine(8);
+        triangleDiamond.drawHorizontalLine(8);
         printSplitLine();
-        triangle.drawVerticalLine(3);
+        triangleDiamond.drawVerticalLine(3);
         printSplitLine();
-        triangle.drawRightTriangle(3);
+        triangleDiamond.drawRightTriangle(3);
         printSplitLine();
 
+        triangleDiamond.drawIsoscelesTriangle(3);
+        printSplitLine();
+
+        triangleDiamond.drawCenteredDiamond(3);
+        printSplitLine();
+
+        triangleDiamond.drawCenteredDiamondWithName(3, "Bill");
+
+        printSplitLine();
     }
 
     private static void printSplitLine() {
