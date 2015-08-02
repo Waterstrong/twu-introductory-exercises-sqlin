@@ -1,0 +1,41 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+ext{
+    assertJVersion = '2.0.0'
+    junitVersion = '4.11'
+    mockitoVersion = '1.9.5'
+}
+
+dependencies {
+    testCompile 'junit:junit:$junitVersion'
+    testCompile 'org.mockito:mockito-all:$mockitoVersion'
+    testCompile('org.assertj:assertj-core:$assertJVersion')
+}
+
+group = 'com.twu.exercise'
+version =  'v1.0.0'
+
+allprojects {
+    apply plugin: 'idea'
+}
+
+idea {
+    project {
+        jdkName = JavaVersion.VERSION_1_7
+        languageLevel = JavaVersion.VERSION_1_7
+        vcs = "Git"
+    }
+}
+
+
+defaultTasks 'clean', 'build'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.5'
+}
