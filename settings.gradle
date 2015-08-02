@@ -16,4 +16,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'twu-introductory-exercises-sqlin'
+rootProject.name = 'introductory-exercises'

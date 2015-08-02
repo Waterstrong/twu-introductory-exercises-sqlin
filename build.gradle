@@ -6,11 +6,6 @@ repositories {
     mavenLocal()
     mavenCentral()
 }
-ext{
-    assertJVersion = '2.0.0'
-    junitVersion = '4.11'
-    mockitoVersion = '1.9.5'
-}
 
 dependencies {
     testCompile 'junit:junit:$junitVersion'
